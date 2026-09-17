@@ -16,15 +16,15 @@ const pageTitles = {
 };
 
 export default function Layout() {
-  const [collapsed, setCollapsed] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const location = useLocation();
   const title = pageTitles[location.pathname] || 'AquaGuard AI';
 
   return (
     <div className="flex h-screen overflow-hidden bg-slate-50">
-      <Sidebar collapsed={collapsed} onClose={() => setCollapsed(true)} />
+      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
-        <TopNavbar onMenuToggle={() => setCollapsed(v => !v)} title={title} />
+        <TopNavbar onMenuToggle={() => setSidebarOpen(v => !v)} title={title} />
         <main className="flex-1 overflow-y-auto">
           <Outlet />
         </main>
