@@ -12,11 +12,11 @@ export default function Login() {
   const handleSubmit = (e) => { e.preventDefault(); navigate('/dashboard'); };
 
   return (
-    <div className="min-h-screen flex">
+    <div className="h-screen flex overflow-hidden">
 
       {/* ── Left Panel ─────────────────────────────────── */}
       <div
-        className="hidden lg:flex flex-col justify-between w-[55%] p-14 text-white relative overflow-hidden"
+        className="hidden lg:flex flex-col justify-between w-[55%] p-14 text-white relative overflow-hidden h-full"
         style={{ background: 'linear-gradient(145deg, #0a1628 0%, #0c2040 55%, #0a1e3d 100%)' }}
       >
         {/* Decorative blobs */}
@@ -127,7 +127,7 @@ export default function Login() {
       </div>
 
       {/* ── Right Panel ────────────────────────────────── */}
-      <div className="flex-1 flex items-center justify-center p-8 bg-slate-50">
+      <div className="flex-1 flex items-center justify-center p-8 bg-slate-50 self-stretch">
         <div className="w-full max-w-sm">
 
           {/* Mobile logo */}

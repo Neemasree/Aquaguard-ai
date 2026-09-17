@@ -32,7 +32,7 @@ export default function Sidebar({ open, onClose }) {
         className={`
           flex-shrink-0 flex flex-col h-full z-30 transition-all duration-300 ease-in-out
           ${open ? 'w-60' : 'w-0 lg:w-16'}
-          fixed lg:relative top-0 left-0
+          fixed lg:static top-0 left-0
           ${open ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         `}
         style={{ backgroundColor: '#0a1628' }}
@@ -103,8 +103,6 @@ export default function Sidebar({ open, onClose }) {
         </div>
       </aside>
 
-      {/* Spacer so content doesn't go under fixed sidebar on desktop */}
-      <div className={`hidden lg:block flex-shrink-0 transition-all duration-300 ${open ? 'w-60' : 'w-16'}`} />
     </>
   );
 }
