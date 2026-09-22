@@ -1,17 +1,32 @@
-# node_modules for frontend
+# ── Frontend ──────────────────────────────────────────
 frontend/node_modules/
 frontend/dist/
-frontend/dist-ssr/
 frontend/.env
-frontend/.env.local
+frontend/.env.*
+!frontend/.env.example
 
-# backend
+# ── Backend ───────────────────────────────────────────
 backend/__pycache__/
-backend/*.pyc
-backend/.env
+backend/**/__pycache__/
+backend/*.py[cod]
 backend/venv/
 backend/.venv/
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
+backend/.env
+backend/.env.*
+!backend/.env.example
+backend/logs/
 
-# OS
+# ── Root node_modules (legacy, before restructure) ────
+node_modules/
+dist/
+
+# ── OS ────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
+
+# ── IDE ───────────────────────────────────────────────
+.vscode/
+.idea/
